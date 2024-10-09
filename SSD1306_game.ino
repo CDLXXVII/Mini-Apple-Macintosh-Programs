@@ -7,7 +7,7 @@
 #define SCREEN_HEIGHT 64 // OLED display height, in pixels
 //int a=0;
 int x=0;
-int y=0;
+int y=5;
 
   int r; // Reverse enemy movement flag
 //  int PRX, PRY; //Projectile pos
@@ -757,7 +757,7 @@ display.clearDisplay();
   A[0]=10;
 PLY=60;
 }
-int PRX;
+int PRX; // Projectile pos X and Y
 int PRY;
 
 
@@ -789,7 +789,7 @@ switch (on){ // Check if game is on
   switch (C[25]){ // Drawing enemy 3
     case 1:
     display.drawBitmap(C[0],y, image_data_enemy,5,5,WHITE);
-    //display.drawRect(C[0],y,5,5,WHITE);
+    //display.drawRect(C[0],y,5,5,WHITE); // Optional enemy rectangle graphics
     //display.display();
     break;}
     
@@ -816,9 +816,9 @@ switch (on){ // Check if game is on
   display.drawPixel(PLX,PLY,WHITE); // Draw Player gun
   display.drawLine(PLX-1,PLY+1,PLX+1,PLY+1,WHITE); // Draw Player body
 
-  display.setCursor(16,16);
-  display.println(leftst);
-  display.setCursor(32,16);
+  display.setCursor(16,16); // Debug for buttons
+  display.println(leftst); // Uncomment this segment to test your buttons
+  display.setCursor(32,16); // Draws left, right and fire buttons status
   display.println(rightst);
   display.setCursor(48,16);
   display.println(firest);
@@ -941,14 +941,14 @@ break;
 case 2:
   display.clearDisplay(); // Game over
   display.setCursor(16,32);
-  display.println("Yuor'e Lost!");
+  display.println("GAME OVER");
   display.display();
 break;
 
 case 3:
   display.clearDisplay(); // Level completion
   display.setCursor(16,32);
-  display.println("You're Winner!");
+  display.println("You win!");
   display.display();
 break;
 }}
