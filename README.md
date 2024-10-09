@@ -1,0 +1,2 @@
+Hi! Here you can download programs for your Mini Apple Macintosh: actual computer thing. Currently i made one demo and one game for it. I'm no programmer so feel free to optimize and update the code if you feel like it.
+These are Arduino 2.0 sketch files. You need to open them with Arduino 2.0 or higher, set it up for using with ESP32 (https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/), choose ESP32C3 Developer kit, insert your ESP32 cable, choose a valid COM Port and hit "Upload".
