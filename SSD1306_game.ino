@@ -703,9 +703,9 @@ static const uint8_t image_data_enemy[5] = {
 void setup() {
   // put your setup code here, to run once:
  Serial.begin(9600);
- pinMode(left, INPUT); // button init
- pinMode(right, INPUT);
- pinMode(fire, INPUT);
+ pinMode(left, INPUT_PULLDOWN); // button init
+ pinMode(right, INPUT_PULLDOWN);
+ pinMode(fire, INPUT_PULLDOWN);
 
   // SSD1306_SWITCHCAPVCC = generate display voltage from 3.3V internally
   if(!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)) {
@@ -750,6 +750,7 @@ display.clearDisplay();
   display.display();
   if (fire == HIGH){
     on=1;
+    delay(300);
     display.clearDisplay();
 
 }
